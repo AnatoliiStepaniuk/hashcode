@@ -71,7 +71,7 @@ public class Car {
   }
 
     public String printAcceptedRides() {
-        return this.acceptedRideList.stream()
+        return this.acceptedRideList.size() + " " + this.acceptedRideList.stream()
                 .map(acceptedRide -> acceptedRide.id)
                 .map(Object::toString)
                 .collect(Collectors.joining( " " ));

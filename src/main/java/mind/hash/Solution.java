@@ -23,11 +23,10 @@ public class Solution {
   }
 
     public void print() {
-        int counter = 1;
         try (FileWriter fileWriter = new FileWriter("solution.out");
              PrintWriter printWriter = new PrintWriter(fileWriter)) {
             for (Car car : carsWithAssignedRides) {
-                printWriter.println(counter++ + " " + car.printAcceptedRides());
+                printWriter.println(car.printAcceptedRides());
             }
         } catch (IOException e) {
             e.printStackTrace();
