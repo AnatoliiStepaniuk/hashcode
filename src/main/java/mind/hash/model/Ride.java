@@ -1,4 +1,4 @@
-package model;
+package mind.hash.model;
 
 public class Ride {
     Position start;

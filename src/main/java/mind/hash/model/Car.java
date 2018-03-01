@@ -1,4 +1,4 @@
-package model;
+package mind.hash.model;
 
 import java.util.Comparator;
 import java.util.List;
