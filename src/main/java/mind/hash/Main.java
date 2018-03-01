@@ -6,7 +6,7 @@ public class Main {
     public static void main( String[] args )
     {
 
-        Problem problem = new FIleParse().parse( "a_example.in" );
+        Problem problem = Problem.readFromFile( "a_example.in" );
 
         final Solution solution = problem.solve();
         solution.print();
