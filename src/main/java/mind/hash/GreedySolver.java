@@ -4,6 +4,7 @@ import mind.hash.model.Car;
 import mind.hash.model.Ride;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class GreedySolver implements Solver {
@@ -13,6 +14,7 @@ public class GreedySolver implements Solver {
 
     public GreedySolver(List<Car> cars, List<Ride> rides) {
         this.cars = cars;
+        rides.sort(Comparator.comparingInt(r -> r.earliestStart));
         this.rides = rides;
     }
 
