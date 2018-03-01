@@ -33,6 +33,22 @@ public class Car {
         return true;
     }
 
+    public int getRelativeScore(Ride ride, int bonus){
+        int carStartTime = getAvailableTime();
+        Position carStartPosition = getAvailableStartPosition();
+
+        int timeAtStartPoint = carStartTime + carStartPosition.distanceTo(ride.start);
+
+        int toStartPoint = carStartPosition.distanceTo(ride.start);
+        int rideDistance = ride.start.distanceTo(ride.finish);
+
+        if (timeAtStartPoint <= ride.earliestStart){
+            return rideDistance - toStartPoint + bonus;
+        }
+
+        return rideDistance - toStartPoint;
+    }
+
     public int getAvailableTime(){
         return acceptedRideList.isEmpty() ? 0 : acceptedRideList.get(acceptedRideList.size()-1).actualFinishTime;
     }

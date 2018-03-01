@@ -23,7 +23,7 @@ public class Problem {
 
     public Solution solve()
     {
-        return new Solution(new GreedySolver(cars, rides).solve());
+        return new Solution(new GreedySolver(cars, rides, bonus).solve());
     }
 
     public static Problem readFromFile( String fileName )
