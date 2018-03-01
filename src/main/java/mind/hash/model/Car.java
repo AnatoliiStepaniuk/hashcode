@@ -38,7 +38,7 @@ public class Car {
     }
 
     public Position getAvailableStartPosition(){
-        return acceptedRideList.isEmpty() ? new Position(0, 0) : acceptedRideList.get(acceptedRideList.size() - 1).start;
+        return acceptedRideList.isEmpty() ? new Position(0, 0) : acceptedRideList.get(acceptedRideList.size() - 1).finish;
     }
 
   public int getScore()
