@@ -16,6 +16,6 @@ public class Ride {
     }
 
     public int getLength() {
-        return Math.abs(start.x - finish.x) + Math.abs(start.y - finish.y);
+        return start.distanceTo( finish );
     }
 }
