@@ -1,11 +1,12 @@
-import model.Position;
-import model.Problem;
-import model.Ride;
+package mind.hash;
+
+import mind.hash.model.Position;
+import mind.hash.model.Problem;
+import mind.hash.model.Ride;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 /**

@@ -1,4 +1,6 @@
-package model;
+package mind.hash.model;
+
+import mind.hash.Solution;
 
 import java.util.List;
 
@@ -13,6 +15,11 @@ public class Problem {
     int bonus;
     int steps;
     List<Ride> rides;
+
+    public Solution solve()
+    {
+        return new Solution();
+    }
 
     public int getRows() {
         return rows;
