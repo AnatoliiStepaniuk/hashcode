@@ -69,4 +69,11 @@ public class Car {
       AcceptedRide acceptedRide = new AcceptedRide(ride, actualStartTime, actualFinishTime);
       acceptedRideList.add(acceptedRide);
   }
+
+    public String printAcceptedRides() {
+        return this.acceptedRideList.stream()
+                .map(acceptedRide -> acceptedRide.id)
+                .map(Object::toString)
+                .collect(Collectors.joining( " " ));
+    }
 }
