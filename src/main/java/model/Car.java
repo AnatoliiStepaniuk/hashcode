@@ -11,8 +11,19 @@ public class Car {
     }
 
     public boolean canFulfill(Ride ride){
-        // TODO when will finish? is it <= ride finish time?
-//        int startTime = acceptedRideList.isEmpty() ?
+        int carStartTime = acceptedRideList.isEmpty() ? 0 : acceptedRideList.get(acceptedRideList.size()-1).actualFinishTime;
+        Position carStartPosition = acceptedRideList.isEmpty() ? new Position(0, 0) : acceptedRideList.get(acceptedRideList.size() - 1).start;
+
+        int timeAtStartPoint = carStartTime + carStartPosition.distanceTo(ride.start);
+
+        // TODO if willGetAtStartPoint <= ride.startTime we will get bonus!
+
+        int timeAtFinishPoint = timeAtStartPoint + ride.start.distanceTo(ride.finish);
+
+        // TODO CAREFUL with constraints!!!
+        if(timeAtFinishPoint > ride.latestFinish)
+            return false;
+
         return true;
     }
 
@@ -21,7 +32,7 @@ public class Car {
     Position current = new Position( 0, 0 );
     int currentStep = 0;
 
-    acceptedRideList.sort( Comparator.comparingInt( ride -> ride.actualStep ) );
+    acceptedRideList.sort( Comparator.comparingInt( ride -> ride.actualStartTime ) );
 
     int score = 0;
     for( AcceptedRide acceptedRide : acceptedRideList )
