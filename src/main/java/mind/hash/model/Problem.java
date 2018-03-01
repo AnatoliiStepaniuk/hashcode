@@ -4,6 +4,7 @@ import mind.hash.FileParse;
 import mind.hash.Solution;
 import mind.hash.GreedySolver;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -18,7 +19,7 @@ public class Problem {
     int bonus;
     int steps;
     List<Ride> rides;
-    List<Car> cars;
+    List<Car> cars = new ArrayList<>();
 
     public Solution solve()
     {
