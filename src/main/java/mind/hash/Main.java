@@ -7,12 +7,12 @@ public class Main {
     {
 
         Problem problem = Problem.readFromFile( "a_example.in" );
-        System.out.println( "--- Problem statement ---" );
-        System.out.println( problem.toString() );
+//        System.out.println( "--- Problem statement ---" );
+//        System.out.println( problem.toString() );
 
         final Solution solution = problem.solve();
         solution.print();
 
-        System.out.println( "Hello HashCode, we made it!" );
+//        System.out.println( "Hello HashCode, we made it!" );
     }
 }
