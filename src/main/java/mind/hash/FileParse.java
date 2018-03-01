@@ -12,7 +12,8 @@ import java.util.Scanner;
 /**
  * Created by Denys on 2018-03-01.
  */
-public class FIleParse {
+public class FileParse
+{
 
     public Problem parse(String fileName) {
         ClassLoader classLoader = getClass().getClassLoader();
