@@ -33,7 +33,6 @@ public class Ride {
         if (o == null || getClass() != o.getClass()) return false;
 
         Ride ride = (Ride) o;
-
         if (earliestStart != ride.earliestStart) return false;
         if (latestFinish != ride.latestFinish) return false;
         if (id != ride.id) return false;
@@ -54,6 +53,6 @@ public class Ride {
     @Override
     public String toString()
     {
-        return "ride from " + start + " to " + finish + ", earliest start " + earliestStart + ", latest finish " + latestFinish;
+        return "ride " + id + " from " + start + " to " + finish + ", earliest start " + earliestStart + ", latest finish " + latestFinish;
     }
 }

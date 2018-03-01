@@ -6,14 +6,16 @@ import mind.hash.model.Problem;
 public class Main {
     public static void main( String[] args )
     {
+        solve("a_example", ".in");
+        solve("b_should_be_easy", ".in");
+        solve("c_no_hurry", ".in");
+        solve("d_metropolis", ".in");
+        solve("e_high_bonus", ".in");
+    }
 
-        Problem problem = Problem.readFromFile( "b_should_be_easy.in" );
-//        System.out.println( "--- Problem statement ---" );
-//        System.out.println( problem.toString() );
-
+    private static void solve(String fileName, String extension) {
+        Problem problem = Problem.readFromFile( fileName + extension );
         final Solution solution = problem.solve();
-        solution.print();
-
-//        System.out.println( "Hello HashCode, we made it!" );
+        solution.print(fileName);
     }
 }

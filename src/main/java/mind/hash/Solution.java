@@ -22,8 +22,8 @@ public class Solution {
             .sum();
   }
 
-    public void print() {
-        try (FileWriter fileWriter = new FileWriter("solution.out");
+    public void print(String fileName) {
+        try (FileWriter fileWriter = new FileWriter("solution_" + fileName + ".out" );
              PrintWriter printWriter = new PrintWriter(fileWriter)) {
             for (Car car : carsWithAssignedRides) {
                 printWriter.println(car.printAcceptedRides());
