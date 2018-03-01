@@ -1,3 +1,5 @@
+package model;
+
 public class AcceptedRide extends Ride {
     int actualStep;
     int finishStep;
