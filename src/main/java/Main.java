@@ -1,3 +1,5 @@
+import model.Problem;
+
 import java.awt.*;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -6,6 +8,8 @@ import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) throws Exception {
+        FIleParse fIleParse = new FIleParse();
+        Problem problem = fIleParse.parse("a_example.in");
         String fileName = "input.txt";
         //read file into stream, try-with-resources
         try (Stream<String> stream = Files.lines(Paths.get(fileName))) {
