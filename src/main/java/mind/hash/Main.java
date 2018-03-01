@@ -1,5 +1,6 @@
 package mind.hash;
 
+import mind.hash.model.Optimizer;
 import mind.hash.model.Problem;
 
 public class Main {

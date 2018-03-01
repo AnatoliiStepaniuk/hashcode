@@ -1,8 +1,7 @@
 package mind.hash.model;
 
-import mind.hash.model.Position;
-import mind.hash.model.Ride;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
@@ -10,7 +9,7 @@ import java.util.stream.Collectors;
 public class Optimizer {
     public static final Position START = new Position(0, 0);
 
-    TreeSet<Ride> getSortedRides(
+    public static Collection<Ride> getSortedRides(
             Position currentPosition,
             List<Ride> rides,
             final int currentStep,
