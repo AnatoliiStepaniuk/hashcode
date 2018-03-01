@@ -1,20 +1,20 @@
 package model;
 
 public class AcceptedRide extends Ride {
-    int actualStep;
-    int finishStep;
+    int actualStartTime;
+    int actualFinishTime;
 
     public AcceptedRide(
             Position start,
             Position finish,
             int earliestStart,
             int latestFinish,
-            int actualStep,
-            int finishStep,
+            int actualStartTime,
+            int actualFinishTime,
             int id
     ) {
         super(start, finish, earliestStart, latestFinish, id);
-        this.actualStep = actualStep;
-        this.finishStep = finishStep;
+        this.actualStartTime = actualStartTime;
+        this.actualFinishTime = actualFinishTime;
     }
 }
