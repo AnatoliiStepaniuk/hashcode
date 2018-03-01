@@ -10,9 +10,10 @@ public class AcceptedRide extends Ride {
             int earliestStart,
             int latestFinish,
             int actualStep,
-            int finishStep
+            int finishStep,
+            int id
     ) {
-        super(start, finish, earliestStart, latestFinish);
+        super(start, finish, earliestStart, latestFinish, id);
         this.actualStep = actualStep;
         this.finishStep = finishStep;
     }
