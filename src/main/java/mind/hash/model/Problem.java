@@ -2,6 +2,7 @@ package mind.hash.model;
 
 import mind.hash.FileParse;
 import mind.hash.Solution;
+import mind.hash.GreedySolver;
 
 import java.util.List;
 
@@ -16,10 +17,11 @@ public class Problem {
     int bonus;
     int steps;
     List<Ride> rides;
+    List<Car> cars;
 
     public Solution solve()
     {
-        return new Solution();
+        return new Solution(new GreedySolver(cars, rides).solve());
     }
 
     public static Problem readFromFile( String fileName )
@@ -51,6 +53,9 @@ public class Problem {
 
     public Problem setVehicles(int vehicles) {
         this.vehicles = vehicles;
+        for(int i = 0; i < vehicles; i++){
+            cars.add(new Car());
+        }
         return this;
     }
 

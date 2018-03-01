@@ -3,10 +3,15 @@ package mind.hash;
 import mind.hash.model.Car;
 
 import java.util.Collection;
+import java.util.List;
 
 public class Solution
 {
   private Collection<Car> carsWithAssignedRides;
+
+  public Solution(List<Car> cars){
+    carsWithAssignedRides = cars;
+  }
 
   public int score()
   {

@@ -1,11 +1,16 @@
 package mind.hash.model;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class Car {
     List<AcceptedRide> acceptedRideList;
+
+    public Car(){
+        acceptedRideList = new ArrayList<>();
+    }
 
     public Car(List<AcceptedRide> acceptedRideList) {
         this.acceptedRideList = acceptedRideList;

@@ -1,4 +1,5 @@
-import mind.hash.Solver;
+package mind.hash;
+
 import mind.hash.model.Car;
 import mind.hash.model.Ride;
 
