@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Car {
-    List<AcceptedRide> acceptedRideList;
+    public List<AcceptedRide> acceptedRideList;
 
     public Car(){
         acceptedRideList = new ArrayList<>();

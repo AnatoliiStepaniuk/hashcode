@@ -7,7 +7,7 @@ public class Main {
     public static void main( String[] args )
     {
 
-        Problem problem = Problem.readFromFile( "a_example.in" );
+        Problem problem = Problem.readFromFile( "b_should_be_easy.in" );
 //        System.out.println( "--- Problem statement ---" );
 //        System.out.println( problem.toString() );
 
