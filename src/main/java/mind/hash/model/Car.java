@@ -58,8 +58,9 @@ public class Car {
   }
 
   public void add(Ride ride){
-        // TODO implement
-      Position start = getAvailableStartPosition();
-      AcceptedRide acceptedRide = new AcceptedRide(ride, 1, 1);// TODO FIX IT!
+      int actualStartTime = getAvailableTime() + getAvailableStartPosition().distanceTo(ride.start);
+      int actualFinishTime = actualStartTime + ride.start.distanceTo(ride.finish);
+      AcceptedRide acceptedRide = new AcceptedRide(ride, actualStartTime, actualFinishTime);
+      acceptedRideList.add(acceptedRide);
   }
 }

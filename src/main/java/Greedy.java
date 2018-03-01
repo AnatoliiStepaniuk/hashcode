@@ -1,5 +1,5 @@
-import model.Car;
-import model.Ride;
+import mind.hash.model.Car;
+import mind.hash.model.Ride;
 
 import java.util.List;
 
