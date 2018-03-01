@@ -5,6 +5,7 @@ import mind.hash.Solution;
 import mind.hash.GreedySolver;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Created by Denys on 2018-03-01.
@@ -27,6 +28,13 @@ public class Problem {
     public static Problem readFromFile( String fileName )
     {
         return new FileParse().parse( fileName );
+    }
+
+    @Override
+    public String toString()
+    {
+        return rows + " rows, " + columns + " columns, " + vehicles + " vehicles, " + rides.size() + " rides, " + bonus + " bonus and " + steps + " steps\n"
+                + rides.stream().map( Ride::toString ).collect( Collectors.joining( "\n" ) );
     }
 
     public int getRows() {

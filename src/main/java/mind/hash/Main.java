@@ -7,6 +7,8 @@ public class Main {
     {
 
         Problem problem = Problem.readFromFile( "a_example.in" );
+        System.out.println( "--- Problem statement ---" );
+        System.out.println( problem.toString() );
 
         final Solution solution = problem.solve();
         solution.print();
