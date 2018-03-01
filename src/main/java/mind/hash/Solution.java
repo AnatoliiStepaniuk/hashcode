@@ -17,6 +17,22 @@ public class Solution
 
   public void print()
   {
-    System.out.println( "LOL FU" );
+    int counter = 1;
+    for (Car car : carsWithAssignedRides) {
+      printCar(counter++, car);
+    }
+  }
+
+  private void printCar( int counter, Car car ) {
+    System.out.println(counter + " " + car.printAcceptedRides());
+  }
+
+  public Collection<Car> getCarsWithAssignedRides() {
+    return carsWithAssignedRides;
+  }
+
+  public Solution setCarsWithAssignedRides(Collection<Car> carsWithAssignedRides) {
+    this.carsWithAssignedRides = carsWithAssignedRides;
+    return this;
   }
 }
