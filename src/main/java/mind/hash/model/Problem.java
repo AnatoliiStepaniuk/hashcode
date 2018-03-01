@@ -1,5 +1,6 @@
 package mind.hash.model;
 
+import mind.hash.FileParse;
 import mind.hash.Solution;
 
 import java.util.List;
@@ -19,6 +20,11 @@ public class Problem {
     public Solution solve()
     {
         return new Solution();
+    }
+
+    public static Problem readFromFile( String fileName )
+    {
+        return new FileParse().parse( fileName );
     }
 
     public int getRows() {
