@@ -32,7 +32,7 @@ public class Car {
     Position current = new Position( 0, 0 );
     int currentStep = 0;
 
-    acceptedRideList.sort( Comparator.comparingInt( ride -> ride.actualStep ) );
+    acceptedRideList.sort( Comparator.comparingInt( ride -> ride.actualStartTime ) );
 
     int score = 0;
     for( AcceptedRide acceptedRide : acceptedRideList )
