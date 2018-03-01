@@ -28,7 +28,7 @@ public class Optimizer {
                     scoreRide2 += currentStep - r2.earliestStart;
                     scoreRide1 -= r1.getLength();
                     scoreRide2 -= r2.getLength();
-                    return Integer.compare(scoreRide2, scoreRide1);
+                    return Integer.compare(scoreRide1, scoreRide2);
                 }
         );
         sortedRides.addAll(
