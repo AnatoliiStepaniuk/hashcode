@@ -8,4 +8,9 @@ public class Position {
         this.x = x;
         this.y = y;
     }
+
+    public int distanceTo( Position another )
+    {
+        return Math.abs( this.x - another.x ) + Math.abs( this.y - another.y );
+    }
 }
