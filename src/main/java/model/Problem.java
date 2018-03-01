@@ -1,5 +1,7 @@
 package model;
 
+import java.util.List;
+
 /**
  * Created by Denys on 2018-03-01.
  */
@@ -8,9 +10,9 @@ public class Problem {
     int rows;
     int columns;
     int vehicles;
-    int rides;
     int bonus;
     int steps;
+    List<Ride> rides;
 
     public int getRows() {
         return rows;
@@ -39,15 +41,6 @@ public class Problem {
         return this;
     }
 
-    public int getRides() {
-        return rides;
-    }
-
-    public Problem setRides(int rides) {
-        this.rides = rides;
-        return this;
-    }
-
     public int getBonus() {
         return bonus;
     }
@@ -63,6 +56,15 @@ public class Problem {
 
     public Problem setSteps(int steps) {
         this.steps = steps;
+        return this;
+    }
+
+    public List<Ride> getRides() {
+        return rides;
+    }
+
+    public Problem setRides(List<Ride> rides) {
+        this.rides = rides;
         return this;
     }
 }
