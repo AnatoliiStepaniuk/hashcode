@@ -11,8 +11,8 @@ public class Car {
     }
 
     public boolean canFulfill(Ride ride){
-        int carStartTime = acceptedRideList.isEmpty() ? 0 : acceptedRideList.get(acceptedRideList.size()-1).actualFinishTime;
-        Position carStartPosition = acceptedRideList.isEmpty() ? new Position(0, 0) : acceptedRideList.get(acceptedRideList.size() - 1).start;
+        int carStartTime = getAvailableTime();
+        Position carStartPosition = getAvailableStartPosition();
 
         int timeAtStartPoint = carStartTime + carStartPosition.distanceTo(ride.start);
 
@@ -25,6 +25,14 @@ public class Car {
             return false;
 
         return true;
+    }
+
+    public int getAvailableTime(){
+        return acceptedRideList.isEmpty() ? 0 : acceptedRideList.get(acceptedRideList.size()-1).actualFinishTime;
+    }
+
+    public Position getAvailableStartPosition(){
+        return acceptedRideList.isEmpty() ? new Position(0, 0) : acceptedRideList.get(acceptedRideList.size() - 1).start;
     }
 
   public int getScore()
@@ -47,5 +55,11 @@ public class Car {
     }
 
     return score;
+  }
+
+  public void add(Ride ride){
+        // TODO implement
+      Position start = getAvailableStartPosition();
+      AcceptedRide acceptedRide = new AcceptedRide(ride, 1, 1);// TODO FIX IT!
   }
 }

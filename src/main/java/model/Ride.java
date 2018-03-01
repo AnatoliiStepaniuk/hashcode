@@ -15,6 +15,14 @@ public class Ride {
         this.id = id;
     }
 
+    public Ride(Ride other){
+        this.start = other.start;
+        this.finish = other.finish;
+        this.earliestStart = other.earliestStart;
+        this.latestFinish = other.latestFinish;
+        this.id = other.id;
+    }
+
     public int getLength() {
         return start.distanceTo( finish );
     }

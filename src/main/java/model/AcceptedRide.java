@@ -17,4 +17,10 @@ public class AcceptedRide extends Ride {
         this.actualStartTime = actualStartTime;
         this.actualFinishTime = actualFinishTime;
     }
+
+    public AcceptedRide(Ride ride, int actualStartTime, int actualFinishTime){
+        super(ride);
+        this.actualStartTime = actualStartTime;
+        this.actualFinishTime = actualFinishTime;
+    }
 }
