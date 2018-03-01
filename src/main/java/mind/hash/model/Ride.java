@@ -18,4 +18,10 @@ public class Ride {
     public int getLength() {
         return start.distanceTo( finish );
     }
+
+    @Override
+    public String toString()
+    {
+        return "ride from " + start + " to " + finish + ", earliest start " + earliestStart + ", latest finish " + latestFinish;
+    }
 }

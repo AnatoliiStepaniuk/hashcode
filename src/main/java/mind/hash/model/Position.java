@@ -13,4 +13,10 @@ public class Position {
     {
         return Math.abs( this.x - another.x ) + Math.abs( this.y - another.y );
     }
+
+    @Override
+    public String toString()
+    {
+        return "[" + x + ", " + y + "]";
+    }
 }
